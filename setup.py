@@ -1,10 +1,10 @@
 from setuptools import setup
+import jaraco.text
 
 APP = ['main.py']
 OPTIONS = {
-    'argv_emulation': True,
     'iconfile': 'icon.icns',
-    "packages": ["requests", "python_dotenv"]
+    'packages': ['requests', 'dotenv', 'chardet'],
 }
 
 setup(

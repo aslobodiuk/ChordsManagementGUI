@@ -16,10 +16,7 @@ def run_gui():
 class ChordEditor(tk.Tk):
     def __init__(self):
         super().__init__()
-        protocol = os.getenv("PROTOCOL")
-        host = os.getenv("HOST")
-        port = int(os.getenv("PORT", 8000))
-        self.url = f"{protocol}://{host}:{port}"
+        self.url = os.getenv("API_URL")
         self.song_id_map = {}
         self.selected_song_ids = []
         self.current_song_id = None
